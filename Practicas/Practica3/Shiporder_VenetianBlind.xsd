@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!-- was: <?xml version="1.0"?> -->
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xsd:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+<xsd:annotation>
+    <xsd:documentation>
+        shiporder schema as Venetian Blind design.
+    </xsd:documentation>
+</xsd:annotation>
+<!−− Single global root element exposed −−>
+<xsd:element name="shiporder" type="tns:shiporderType"/>
+<!−− The root is given a type that is defined here,
+using all externally defined elements. −−>
+
+    <xsd:complexType name="shiporderType">
+		<xsd:sequence>
+			<xsd:element name="orderperson" type="tns:orderpersonType"/>
+			<xsd:element name="shipto" type="tns:shiptoType"/>
+			<xsd:element name="item" type="tns:itemType"/>
+		</xsd:sequence>
+    </xsd:complexType>
+
+
+	<xsd:simpleType name="orderpersonType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="shiptoType">
+		<xsd:sequence>
+			<xsd:element name="name" type="tns:nameType"/>
+			<xsd:element name="address" type="tns:addressType"/>
+			<xsd:element name="city" type="tns:cityType"/>
+			<xsd:element name="country" type="tns:countryType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+		<xsd:simpleType name="nameType">
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="addressType">
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="cityType">
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="countryType">
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	
+
+
+    <xsd:complexType name="itemType" maxOccurs="unbounded">
+        <xsd:sequence>
+            <xsd:element name="title" type="tns:titleType"/>
+            <xsd:element name="note" type="tns:noteType" minOccurs="0"/>
+            <xsd:element name="quantity" type="tns:quantityType"/>
+            <xsd:element name="price" type="tns:priceType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+		<xsd:simpleType name="titleType">
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="noteType">
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="quantityType">
+			<xsd:restriction base="xsd:positiveInteger">
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+		<xsd:simpleType name="priceType">
+			<xsd:restriction base="xsd:decimal">
+				<xsd:minLength value="1"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+		
+</xsd:schema>
