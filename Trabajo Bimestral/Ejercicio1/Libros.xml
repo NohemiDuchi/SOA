@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Libros xs:noNamespaceShemaLocation="LibrosShema.xsd"
+xmlns:xsi:"http://www.w3.org/201/XMLShema-instace">
+
+/*Caracteristicas del Libro*/
+	<Cabecera>
+	
+		<Titulo>T�tulo</Titulo>
+		<Autor>Autor</Autor>
+		<Area>�rea</Area>
+		<Editorial>Editorial</Editorial>
+		<Precio>Precio</Precio>
+		<Publicacion>A�o de Publicaci�n</Publicacion>
+		
+	</Cabecera>
+	
+/*Primer Libro*/
+	<Libro>
+	
+		<Titulo>Cien a�os de soledad</Titulo>
+		<Autor>Gabriel Garc�a M�rquez</Autor>
+		<Area>Novela</Area>
+		<Editorial>Editorial 1</Editorial>
+		<Precio>$10.00</Precio>
+		<Publicacion>1960</Publicacion>
+		
+	</Libro>
+	
+/*Segundo Libro*/
+	<Libro>
+	
+		<Titulo>El se�or de los anillos</Titulo>
+		<Autor>J. R. R. Tolkien</Autor>
+		<Area>Fantas�a</Area>
+		<Editorial>Editorial 2</Editorial>
+		<Precio>$15.46</Precio>
+		<Publicacion>2001</Publicacion>
+		
+	</Libro>
+	
+/*Tercer Libro*/
+	<Libro>
+	
+		<Titulo>SOA Simple</Titulo>
+		<Autor>Lonneke Dikmans</Autor>
+		<Area>T�cnica</Area>
+		<Editorial>Editorial 3</Editorial>
+		<Precio>$45.78</Precio>
+		<Publicacion>2015</Publicacion>
+		
+	</Libro>
+	
+/*Cuarto Libro*/
+	<Libro>
+	
+		<Titulo>Nacho Lee</Titulo>
+		<Autor>Nacho</Autor>
+		<Area>Lectura</Area>
+		<Editorial>Editorial 2</Editorial>
+		<Precio>$11.23</Precio>
+		<Publicacion>1986</Publicacion>
+		
+	</Libro>
+
+/*Quito Libro*/
+	<Libro>
+	
+		<Titulo>22/11/1963</Titulo>
+		<Autor>Stephen King</Autor>
+		<Area>Novela</Area>
+		<Editorial>Editorial 4</Editorial>
+		<Precio>$5.63</Precio>
+		<Publicacion>2009</Publicacion>
+		
+	</Libro>
+	
+/*Quito Libro*/
+	<Libro>
+	
+		<Titulo>22/11/1963</Titulo>
+		<Autor>Stephen King</Autor>
+		<Area>Novela</Area>
+		<Editorial>Editorial 4</Editorial>
+		<Precio>$5.63</Precio>
+		<Publicacion>2009</Publicacion>
+		
+	</Libro>
+	
+/*Sexto Libro*/
+	<Libro>
+	
+		<Titulo>Hamlet</Titulo>
+		<Autor>Willian Shakespeare</Autor>
+		<Area>Novela</Area>
+		<Editorial>Editorial 1</Editorial>
+		<Precio>$23.51</Precio>
+		<Publicacion>1920</Publicacion>
+		
+	</Libro>
+	
+</Libros>

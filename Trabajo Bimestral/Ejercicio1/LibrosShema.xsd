@@ -1,0 +1,32 @@
+<xsd:schema version="1.0"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+
+	<xsd:annotation>
+	
+		<xsd:documentation>
+			Schema de Ejercicio1.xml
+		</xsd:documentation>
+		
+	</xsd:annotation>
+    
+	<xsd:element name="Libros">
+	
+		<xsd:complexType>
+			<xsd:sequence>
+			
+				<xsd:element name="Titulo" type="xsd:string"/>
+				<xsd:element name="Autor" type="xsd:string"/>
+				<xsd:element name="Area" type="xsd:string"/>
+				<xsd:element name="Editorial" type="xsd:string"/>
+				<xsd:element name="Precio" type="xsd:double"/>
+				<xsd:element name="Publicacion" type="xsd:date"/>
+				
+			</xsd:sequence>
+		</xsd:complexType>
+		 
+	</xsd:element>
+</xsd:schema>
+
+		   

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema version="1.0"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.trabajo.com/PersonasShema.xsd"
+elementFormDefault="qualified">
+
+	<xsd:annotation>
+		<xsd:documentation>
+		
+		</xsd:documentation>
+	</xsd:annotation>
+    
+	<xsd:element name="Personas">
+		<xsd:complexType>
+			<xsd:sequence>
+                                <xsd:element name="Datos">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element name="Nombres" type="xsd:string"/>
+                                            <xsd:element name="Apellidos" type="xsd:string"/>
+                                            <xsd:element name="Dni" type="xsd:positiveInteger"/>
+                                    </xsd:sequence>
+                                    
+                                </xsd:element>
+                                <xsd:element name="Comentario" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+			<xs:attribute name="Nacimiento" type="xs:date" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>
+
+		   

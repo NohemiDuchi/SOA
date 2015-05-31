@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema version="1.0"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.trabajo.com/Docencia.xsd"
+elementFormDefault="qualified">
+
+	<xsd:annotation>
+		<xsd:documentation>
+			
+		</xsd:documentation>
+	</xsd:annotation>
+	
+	<xsd:element name="DatosAcademicos">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Pensum" type="xsd:string"/>
+				<xsd:element name="Asignatura">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Nombre" type="xsd:string"/>
+							<xsd:element name="HorasSemana" type="xsd:positiveInteger"/>
+							<xsd:element name="Profesor" type="xsd:string"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

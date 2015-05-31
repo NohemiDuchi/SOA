@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Personas xsi:noNamespaceShemaLocation="PersonasShema.xsd"
+xmlns:xsi:"http://www.w3.org/201/XMLShema-instace">
+
+/*Juan Perez*/
+	<Persona>
+	
+		<Nombre>Juan Pérez</Nombre>
+		<FechaNacimiento>3 de mayo de 1986</FechaNacimiento>
+		<Direccion>
+			<Calle>12 de Octubre y General Foch</Calle>
+			<Ciudad>Quito</Ciudad>
+			<Provincia>Pichincha</Provincia>
+			<Pais>Ecuador</Pais>
+		</Direccion>
+		
+		<Genero>Masculino</Genero>
+		
+	</Persona>
+	
+/*María López*/
+	<Persona>
+	
+		<Nombre>María López</Nombre>
+		
+		<Direccion>
+			<Calle>Tamayo n12 y Francisco Salazar</Calle>
+			<Ciudad>Quito</Ciudad>
+			<Provincia>Pichincha</Provincia>
+			<Pais>Ecuador</Pais>
+		</Direccion>
+		
+		<Direccion>
+			<Calle>Pichincha 605 entre Clemente Ballén y 10 de Agosto</Calle>
+			<Ciudad>Guayaquil</Ciudad>
+			<Provincia>Guayas</Provincia>
+			<Pais>Ecuador</Pais>
+		</Direccion>
+		
+		<Genero>Femenino</Genero>
+		
+	</Persona>
+	
+</Personas>

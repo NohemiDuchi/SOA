@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!-- was: no XML declaration present -->
+
+<Alu:Alumno
+xmlns:xsi:"http://www.w3.org/201/XMLShema-instace"
+xsi:schemaLocation="
+http://www.trabajo.com/PersonasShema.xsd
+http://www.trabajo.com/DocenciaShema.xsd
+http://www.trabajo.com/AlumnoShema.xsd"
+xmlns:Per="http://www.trabajo.com/Personas" 
+xmlns:Doc="http://www.trabajo.com/Docencia"
+xmlns:Alu="http://www.trabajo.com/Alumno">
+
+	<Per:Persona Per:Nacimiento="199-10-20">
+		<Per:Datos>
+			<Per:Nombres>Pepe</Per:Nombres>
+			<Per:Apellidos>Garcia</Per:Apellidos>
+			<Per:Dni>2035671</Per:Dni>
+			<Per:Representante>Tómas Gonzales</Per:Representante>
+		<Per:Datos>
+		<Per:Comentario>Repetidor</Per:Comentario>
+	</Per:Persona>
+
+	<Doc:DatosAcademicos>
+		<Doc:Pensum>1ASIR</Doc:Pensum>
+                
+		<Doc:Asignatura>
+			<Doc:Nombre>Lenguaje de Marcas</Doc:Nombre>
+			<Doc:HorasSemana>4</Doc:HorasSemana>
+			<Doc:Profesor>Juan Moreno</Doc:Profesor>
+		</Doc:Asignatura>
+                
+                <Doc:Asignatura>
+			<Doc:Nombre>Fundamentos del Hardware</Doc:Nombre>
+			<Doc:HorasSemana>3</Doc:HorasSemana>
+			<Doc:Profesor>Viginia López</Doc:Profesor>
+		</Doc:Asignatura>
+                
+	</Doc:DatosAcademicos>
+	
+</Alu:Alumno>
