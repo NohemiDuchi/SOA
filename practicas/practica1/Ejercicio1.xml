@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Ejercicio1> 
+
+    <!-- Colecciòn de CDs-->
+    <ColeccionCDs>
+        <Cd>
+            <Album>Grease</Album>
+            <Autor>Jhon Travolta</Autor>
+            <Genero>Disco</Genero>
+            <Material>Acetato</Material>
+            
+        </Cd>
+        
+        <Cd>
+            <Album>Fly</Album>
+            <Autor>Hilary Duff</Autor>
+            <Genero>Pop</Genero>
+            <Material>Policarbonato</Material>           
+        </Cd>
+    </ColeccionCDs>
+    
+    <!-- Catalogo de plantas de una tienda-->    
+    <Jardineria>
+        <Planta Categority ="Flor">
+            <Nombre>Adelfa</Nombre>
+            <Precio>70 dolares</Precio>
+            <Tipo>Exterior Perenne</Tipo>
+        </Planta>
+            
+        <Planta Categority ="Arbustos">
+            <Nombre>Dimorfoteca</Nombre>
+            <Precio>3dolares</Precio>
+            <Tipo>Exterior</Tipo>
+        </Planta>
+    </Jardineria>
+    
+    <!-- Menu Restaurante-->    
+    <Menu>
+        <Submenu category ="desayuno">
+            <Nombre>Margarita</Nombre>
+            <Contenido>2 Huevos, tocino y queso mozarella</Contenido>
+            <Precio>3.90 dolares</Precio>   
+        </Submenu>
+        
+        <Submenu category ="almuerzo">
+            <Nombre>Del Dia</Nombre>
+            <Contenido>Pollo Primavera, ensalada</Contenido>
+            <Precio>3 dolares</Precio>   
+        </Submenu>
+    </Menu>
+	
+</Ejercicio1>
+
