@@ -1,0 +1,4 @@
+Bundle-Name: EjemploBpelSincrono2Application
+Bundle-SymbolicName: EjemploBpelSincrono2Application
+Bundle-ManifestVersion: 2
+Bundle-Version: 1.0.0

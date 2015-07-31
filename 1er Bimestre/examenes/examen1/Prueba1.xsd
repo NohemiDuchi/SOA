@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!-- was: <?xml version="1.0"?> -->
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xsd:element name="factura" xmlns:xsd="">
+        <xsd:ComplexType>
+            <xsd:element name="datos_empresa" type="datos_empresaType">
+                <xsd:ComplexType>
+                    <xsd:sequense>
+                        <xsd:element name="nombre" type="xsd:string"/>
+                        <xsd:element name="dir" type="xsd:string"/>
+                        <xsd:element name="ciudad" type="xsd:string"/>
+                        <xsd:element name="provincia" type="xsd:string"/>
+                        <xsd:element name="telefono" type="xsd:int">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:int">
+                                    <xsd:pattern value="\d{7}"/>
+                                    <xsd:minLength value="0"/>
+                                    <xsd:maxLength value="3"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+                    </xsd:sequense>
+                </xsd:ComplexType>
+                
+        </xsd:element>
+        
+        <xsd:element name="datos_cliente" type="datos_clienteType">
+            <xsd:ComplexType>
+                <xsd:sequense>
+                    <xsd:element name="nombre" type="xsd:string"/>
+                    <xsd:element name="dir_env" type="xsd:string"/>
+                    <xsd:element name="ciudad" type="xsd:string"/>
+                    <xsd:element name="provincia" type="xsd:string"/>
+                </xsd:sequense>
+            </xsd:ComplexType>
+        </xsd:element>
+        
+        <xsd:element name="datos_factura" type="datos_facturaType">
+            <xsd:complexType>
+                <xsd:sequense>
+                    <xsd:element name="n_ped" type="xsd:int"/>
+                    <xsd:element name="porcentaje_iva" type="xsd:int"/>
+                    <xsd:element name="f_pago" type="xsd:string">
+                        <xsd:simpleType>
+                                <xsd:restriction base="xsd:int">
+                                <xsd:pattern value="efectivo│tarjeta│cheque"/>
+                                </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="moneda" type="xsd:string"/>
+                        <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="\(dolar)?"/>
+                                </xsd:restriction>
+                        </xsd:simpleType>
+                </xsd:sequense>
+            </xsd:complexType>
+                
+        <xsd:element name="fecha" type="xsd:date"/>
+        
+        <xsd:element name="producto" type="productoType" maxOccurs="unbounded">
+            <xsd:ComplexType>
+                <xsd:sequense>
+                    <xsd:element name="cod" type="xsd:string"/>
+                    <xsd:element name="desc" type="xsd:double"/>
+                    <xsd:element name="cant" type="xsd:int"/>
+                    <xsd:element name="precio" type="xsd:double"/>
+                </xsd:sequense>
+            </xsd:ComplexType>
+        </xsd:element>
+        
+        <xsd:element name="subtotal" type="xsd:double"/>
+            
+        <xsd:element name="valor_iva" type="xsd:double"/>
+        
+        <xsd:element name="total" type="xsd:double"/>
+        
+        </xsd:element>
+        </xsd:ComplexType>
+    </xsd:element>
+
+</xs:schema>

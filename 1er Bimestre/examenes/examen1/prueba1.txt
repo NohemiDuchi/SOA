@@ -1,0 +1,14 @@
+Describa brevemente cuál es el problema principal que se intenta resolver 
+con SOA?
+
+El problema principal son los diferentes tipos de informaciòn que tiene la 
+empresa, ya que por lo general una empresa esta dividida por departamentos.
+Lo que conlleva a que pueda existir duplicaciòn de informacion o q su ves 
+que no concuerde la informacion que se desea conocer.
+
+
+SOA intenta unir la informaciòn de cada uno de los departamentos y poder
+implementar un sistema que contenga la informaciòn de cada uno.
+
+
+
