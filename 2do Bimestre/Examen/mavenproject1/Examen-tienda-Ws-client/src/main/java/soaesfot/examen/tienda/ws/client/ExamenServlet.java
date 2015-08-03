@@ -5,15 +5,19 @@
  */
 package soaesfot.examen.tienda.ws.client;
 
+import esfot.soa.PeliculaTO;
 import esfot.soa.TiendaDvdWS;
 import esfot.soa.TiendaDvdWS_Service;
 import java.io.IOException;
 import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+import static java.util.Collections.list;
 
 import javax.xml.ws.WebServiceRef;
 
@@ -39,8 +43,8 @@ public class ExamenServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        try  
+        
+        try  (PrintWriter out = response.getWriter())
         {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -50,34 +54,48 @@ public class ExamenServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Información Pelicula " + request.getContextPath() + "</h1>");
-            try
-            {                           
-              esfot.soa.TiendaDvdWS port=service.getTiendaDvdWSPort();                            
-             
-              String director=request.getParameter("d");                                         
-              
-              java.lang.Object result=port.buscarDirector(director);
-              
-              out.println("List = "+result);
-            }
-            catch(Exception ex)
-            {
+            try {
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Peliculas</title>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet Peliculas desde "
+                    + request.getContextPath() + "</h1>");
+            try { 
                 
-            }          
+                esfot.soa.TiendaDvdWS port =  service.getTiendaDvdWSPort();
+                java.lang.String director = request.getParameter("d");
+                
+                
+                        
+                           
+            List<PeliculaTO> listar = port.buscarDirector(director);
+                        
+               
+                              
+                for (PeliculaTO a : listar) {
+                out.println("<p>Director:" + a.getDirector()+"</p>");
+                
+                out.println("<p>Titulo:" + a.getTitulo() +"</p>" );
+                out.println("<p>Precio:" + a.getPrecio() +"</p>");
+            }
+             
+            } catch (Exception ex) {
+
+            }
             out.println("</body>");
             out.println("</html>");
-        }
-        finally {
+        } finally {
             out.close();
-            
         }
-        
+    }
         
         
            
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+      // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -117,3 +135,4 @@ public class ExamenServlet extends HttpServlet {
     }// </editor-fold>
 
 }
+
